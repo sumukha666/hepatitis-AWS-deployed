@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for, request, render_template
 from sklearn.externals import joblib
 import json
 from flask_cors import CORS
@@ -9,6 +9,13 @@ CORS(app)
 filename = './liver_SVM.joblib.pkl'
 
 svc_load = joblib.load(filename)
+
+@app.route('/',methods=["GET"])
+def home_func():
+	return render_template("index.html")
+	
+
+
 @app.route('/liver',methods=["POST"])
 def sendLiverDetails():
 	if request.method=="POST":
