@@ -12,7 +12,7 @@ svc_load = joblib.load(filename)
 
 @app.route('/',methods=["GET"])
 def home_func():
-	return render_template("index.html")
+	return render_template("homepage.html")
 	
 
 
