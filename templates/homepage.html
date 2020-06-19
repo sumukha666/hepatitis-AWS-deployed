@@ -335,7 +335,7 @@
                     <!-- You have to fill information here -->
                     <p class="grey-text text-lighten-4">Comprehensive liver damage prediction system. We are here to
                         help you with right approach
-                        for your your Liver disease</p>
+                        for your Liver disease</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Contact</h5>
@@ -401,7 +401,7 @@
                         backendCall = false;
                         return;
                     }
-                    if (i !== "Gender" && !parseInt(parsedReq[i])) {
+                    if (i !== "Gender" && !parseFloat(parsedReq[i])) {
                         $("#respon").text(i + " should be numeric");
                         backendCall = false;
                         return;
@@ -412,12 +412,12 @@
                 // console.log(req);
                 if (backendCall) {
                     $.ajax({
-                        url: "http://localhost:5000/liver",
+                        url: "/liver",
                         method: "POST",
                         contentType: "application/json",
                         data: req,
                         success: function (response) {
-                            $("#respon").append(response);
+                            $("#respon").text(response);
                         }
                     })
                 }
@@ -426,9 +426,6 @@
     </script>
 
 
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
 
 </html>

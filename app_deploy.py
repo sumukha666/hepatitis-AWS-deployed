@@ -1,10 +1,8 @@
 from flask import Flask, redirect, url_for, request, render_template
 from sklearn.externals import joblib
 import json
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
 
 filename = './liver_SVM.joblib.pkl'
 
@@ -21,7 +19,7 @@ def sendLiverDetails():
 	if request.method=="POST":
 		liverDetails = (request.get_json(force=True));
 		#print liverDetails
-		print(liverDetails)
+		#print(liverDetails)
 	
 		X = []
 		X.append(liverDetails['Age'])
