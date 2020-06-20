@@ -38,10 +38,10 @@ def sendLiverDetails():
 				return "Please enter " + i + " details"
 
 		res = svc_load.predict([X])
-   		if res[0]:
-				return "you're liver is Damaged"
+   		if res[0]==1:
+				return "your liver is Damaged"
 		else:
-				return "you're liver is functioning well"
+				return "your liver is functioning well"
 
 if __name__ == '__main__':
    app.run()
