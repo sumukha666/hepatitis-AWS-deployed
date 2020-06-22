@@ -13,6 +13,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <style type="text/css">
         .background-color-blue {
             background-color: #0000FF;
@@ -65,14 +66,42 @@
             height: 750;
             width: 100%;
         }
+
         .color-teal {
             background-color: #008080;
         }
+
         .color-light-green {
-            background-color: azure  ;
+            background-color: azure;
         }
+
         .text-white {
-            color :white;
+            color: white;
+        }
+
+        .navbar {
+            min-height: 80px;
+        }
+
+        .navbar-brand {
+            padding: 0 15px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .navbar-toggle {
+            /* (80px - button height 34px) / 2 = 23px */
+            margin-top: 23px;
+            padding: 9px 10px !important;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-nav>li>a {
+                /* (80px - line-height of 27px) / 2 = 26.5px */
+                padding-top: 26.5px;
+                padding-bottom: 26.5px;
+                line-height: 27px;
+            }
         }
     </style>
 </head>
@@ -82,7 +111,7 @@
     <nav class="navbar navbar-expand-lg navbar-light color-teal">
         <div class="display-flex ">
             <!-- <ion-icon name="medkit-outline" size="large" class="text-white"> </ion-icon> -->
-            <a class="navbar-brand text-white" href="/" style="padding-left: 2px;">HealthCare</a>
+            <a class="navbar-brand text-white" href="/" style="padding-left: 2px;font-size: xx-large;"><b> HealthCarer </b></a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,13 +120,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white" href="/"><h4><b>Home</b></h4> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/liver">Liver</a>
+                    <a class="nav-link text-white" href="/liver"><h4><b>Liver</b></h4></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/help">Help</a>
+                    <a class="nav-link text-white" href="/help"><h4><b> Help </b></h4></a>
                 </li>
             </ul>
         </div>
