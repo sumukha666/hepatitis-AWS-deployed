@@ -1,0 +1,266 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <style type="text/css">
+        .background-color-blue {
+            background-color: #0000FF;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .padding-2rem {
+            padding: 2rem;
+        }
+
+        .padding-bottom-1rem {
+            padding-bottom: 1rem;
+        }
+
+        .padding-top-1rem {
+            padding-top: 1rem;
+        }
+
+        .display-flex {
+            display: flex;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+        }
+
+        .footer-css {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/
+            height: 40px;
+            background: grey;
+        }
+
+        .form-background {
+            background-color: azure;
+        }
+
+        .button-size {
+            padding-right: 3rem;
+            padding-left: 3rem;
+        }
+
+        .main-image {
+            height: 750;
+            width: 100%;
+        }
+        .color-teal {
+            background-color: #008080;
+        }
+        .color-light-green {
+            background-color: azure  ;
+        }
+        .text-white {
+            color :white;
+        }
+    </style>
+</head>
+
+<body class="color-light-green">
+    <!-- To be common in all pages -->
+    <nav class="navbar navbar-expand-lg navbar-light color-teal">
+        <div class="display-flex ">
+            <!-- <ion-icon name="medkit-outline" size="large" class="text-white"> </ion-icon> -->
+            <a class="navbar-brand text-white" href="/" style="padding-left: 2px;">HealthCare</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/liver">Liver</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/help">Help</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Image in the main page -->
+    <img src="https://media.itpro.co.uk/image/upload/v1570812810/itpro/images/dir_170/it_photo_85039.jpg"
+        class="main-image" alt="Responsive image">
+
+
+    <!-- Information regarding help -->
+    <div class="card color-light-green">
+        <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                About
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            You can use this application to diagnsis Liver Disease
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                What are liver function tests?
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            Liver function tests, also known as liver chemistries, help determine the health of your
+                            liver by measuring the levels of proteins, liver enzymes, and bilirubin in your
+                            blood.<br><br>
+
+                            A liver function test is often recommended in the following situations:<br>
+                            <ul class="a">
+                                <li>to check for damage from liver infections, such as hepatitis B and hepatitis C</li>
+                                <li>to monitor the side effects of certain medications known to affect the liver</li>
+                                <li>if you already have a liver disease, to monitor the disease and how well a
+                                    particular treatment is working</li>
+                                <li>if you’re experiencing the symptoms of a liver disorder</li>
+                                <li>if you have certain medical conditions such as high triglycerides, diabetes, high
+                                    blood pressure, or anemia</li>
+                                <li>if you drink alcohol heavily</li>
+                                <li>if you have gallbladder disease</li>
+                            </ul>
+
+                            Commonly used tests to check liver abnormalities are tests checking:<br>
+                            <ul class="a">
+                                <li>alanine transaminase (ALT)</li>
+                                <li>aspartate aminotransferase (AST)</li>
+                                <li>alkaline phosphatase (ALP)</li>
+                                <li>albumin</li>
+                                <li>bilirubin</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                How to get result of the report
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <ol>
+                                <li>
+                                    If you have the symptomsof Liver Disease.
+                                </li>
+                                <li>
+                                    Take Live Liver Functional Test under guidence of Dr
+                                </li>
+                                <li>
+                                    Fill the details in the Liver Disease Form.
+                                </li>
+                                <li>
+                                    There will be a dialogue showing the results
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                About Liver and Liver diseases
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <ol>
+                                <li>
+                                    step one
+                                </li>
+                                <li>
+                                    step two
+                                </li>
+                                <li>
+                                    step three
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Further Treatment
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <ol>
+                                <li>
+                                    step one
+                                </li>
+                                <li>
+                                    step two
+                                </li>
+                                <li>
+                                    step three
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <br></br>
+    <!-- Footer -->
+    <footer class="footer-css padding-top-1rem color-teal">
+        <div class="text-center text-white">© PES University:
+            <a href="https://www.pes.edu/" class="text-white">https://www.pes.edu/ </a>
+        </div>
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+
+</html>
