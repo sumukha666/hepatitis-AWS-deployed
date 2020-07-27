@@ -1,0 +1,367 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style type="text/css">
+        .background-color-blue {
+            background-color: #0000FF;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .padding-2rem {
+            padding: 2rem;
+        }
+
+        .padding-bottom-1rem {
+            padding-bottom: 1rem;
+        }
+
+        .padding-top-1rem {
+            padding-top: 1rem;
+        }
+
+        .display-flex {
+            display: flex;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+        }
+
+        .footer-css {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/
+            height: 40px;
+            background: grey;
+        }
+
+        .form-background {
+            background-color: azure;
+        }
+
+        .button-size {
+            padding-right: 3rem;
+            padding-left: 3rem;
+        }
+
+        .main-image {
+            height: 750;
+            width: 100%;
+        }
+
+        .color-teal {
+            background-color: #008080;
+        }
+
+        .color-light-green {
+            background-color: azure;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .navbar {
+            min-height: 80px;
+        }
+
+        .navbar-brand {
+            padding: 0 15px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .navbar-toggle {
+            /* (80px - button height 34px) / 2 = 23px */
+            margin-top: 23px;
+            padding: 9px 10px !important;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-nav>li>a {
+                /* (80px - line-height of 27px) / 2 = 26.5px */
+                padding-top: 26.5px;
+                padding-bottom: 26.5px;
+                line-height: 27px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .modal-dialog {
+                width: 600;
+                margin: 30px auto;
+            }
+
+            .modal-content {
+                -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            }
+
+            .modal-sm {
+                width: 300px;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="color-light-green">
+    <!-- To be common in all pages -->
+    <nav class="navbar navbar-expand-lg navbar-light color-teal">
+        <div class="display-flex">
+            <!-- <ion-icon name="medkit-outline" size="large"> </ion-icon> -->
+            <a class="navbar-brand text-white" href="/" style="padding-left: 2px; font-size: xx-large;"><b> HealthCarer
+                </b></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="/">
+                        <h4><b>Home</b></h4> <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/liver">
+                        <h4><b>Liver</b></h4>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/help">
+                        <h4><b> Help </b></h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Image in the main page -->
+    <img src="https://image.freepik.com/free-vector/futuristic-glowing-low-polygonal-human-liver-isolated-dark-blue-background_67515-710.jpg"
+        class="main-image" alt="Responsive image">
+
+    <div class=" form-background">
+
+        <form class="padding-2rem" id="liverform">
+            <h3 class="text-center padding-bottom-1rem">Liver Disease Form</h3>
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Age</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" id="Age" placeholder="Enter Age" style="font-size: xx-large;">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-3 col-form-label" style="font-size: xx-large;">Gender</label>
+                <div class="col-sm-9">
+                    <select id="Gender" class="form-control form-control-lg" style="font-size: xx-large;">
+                        <option selected value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Total Bilirubin</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" id="Total_Bilirubin"
+                        placeholder="Enter Total_Bilirubin" style="font-size: xx-large;">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Direct Bilirubin</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" id="Direct_Bilirubin" style="font-size: xx-large;"
+                        placeholder="Enter Direct_Bilirubin">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Alkaline Phosphotase</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" id="Alkaline_Phosphotase" style="font-size: xx-large;"
+                        placeholder="Enter Alkaline_Phosphotase">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Alamine Aminotransferase</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" id="Alamine_Aminotransferase" style="font-size: xx-large;"
+                        placeholder="Enter Alamine_Aminotransferase">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Aspartate Aminotransferase</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" id="Aspartate_Aminotransferase" style="font-size: xx-large;"
+                        placeholder="Enter Aspartate_Aminotransferase">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Total Protiens</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" id="Total_Protiens" style="font-size: xx-large;"
+                        placeholder="Enter Total_Protiens">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Albumin</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" style="font-size: xx-large;" id="Albumin" placeholder="Enter Albumin">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="from" class="col-sm-3 col-form-label" style="font-size: xx-large;">Albumin and Globulin_Ratio</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control form-control-lg" style="font-size: xx-large;" id="Albumin_and_Globulin_Ratio"
+                        placeholder="Enter Albumin_and_Globulin_Ratio">
+                </div>
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary button-size btn-lg" data-toggle="modal"
+                    data-target="#exampleModalCenter" style="font-size: xx-large;">Submit</button>
+            </div>
+
+            <div class="row center-align">
+                <h6 style="color: #ff6e40;" id="respon">
+
+                </h6>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="btnclick">
+    Launch demo modal
+    </button>  -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content color-light-green">
+                <div class="modal-header color-teal">
+                    <h5 class="modal-title text-white" id="exampleModalLongTitle" style="font-size: x-large;">Liver Test
+                        Prediction</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="" id="submitrespon">
+
+                    </h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn color-teal" data-dismiss="modal"><span
+                            class="text-white">Close<span></button>
+                    <!-- <button type="button" class="btn btn-primary" >Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Footer -->
+    <footer class="footer-css padding-top-1rem color-teal">
+        <div class="text-center text-white">© PES University:
+            <a href="https://www.pes.edu/" class="text-white">https://www.pes.edu/ </a>
+        </div>
+
+    </footer>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('#liverform').on('submit', function (event) {
+
+                event.preventDefault();
+                var Age = $("#Age").val();
+                var Gender = $("#Gender").val();
+                var Total_Bilirubin = $("#Total_Bilirubin").val();
+                var Direct_Bilirubin = $("#Direct_Bilirubin").val();
+                var Alkaline_Phosphotase = $("#Alkaline_Phosphotase").val();
+                var Alamine_Aminotransferase = $("#Alamine_Aminotransferase").val();
+                var Aspartate_Aminotransferase = $("#Aspartate_Aminotransferase").val();
+                var Total_Protiens = $("#Total_Protiens").val();
+                var Albumin = $("#Albumin").val();
+                var Albumin_and_Globulin_Ratio = $("#Albumin_and_Globulin_Ratio").val();
+                let backendCall = true;
+                var req = JSON.stringify({
+                    "Age": Age,
+                    "Gender": Gender,
+                    "Total_Bilirubin": Total_Bilirubin,
+                    "Direct_Bilirubin": Direct_Bilirubin,
+                    "Alkaline_Phosphotase": Alkaline_Phosphotase,
+                    "Alamine_Aminotransferase": Alamine_Aminotransferase,
+                    "Aspartate_Aminotransferase": Aspartate_Aminotransferase,
+                    "Total_Protiens": Total_Protiens,
+                    "Albumin": Albumin,
+                    "Albumin_and_Globulin_Ratio": Albumin_and_Globulin_Ratio
+                });
+                const parsedReq = JSON.parse(req);
+
+                for (i in parsedReq) {
+                    if (parsedReq[i] === "") {
+                        $("#submitrespon").text("please enter " + i);
+                        backendCall = false;
+                        return;
+                    }
+                    if (!parseFloat(parsedReq[i])) {
+                        $("#submitrespon").text(i + " should be numeric");
+                        backendCall = false;
+                        return;
+                    }
+                }
+
+
+                console.log(req);
+                if (backendCall) {
+                    $.ajax({
+                        url: "/liver",
+                        method: "POST",
+                        contentType: "application/json",
+                        data: req,
+                        success: function (response) {
+                            $("#submitrespon").text(response);
+                            //$("btn-click").click()
+                            //console.log($("#btnclick").click)
+                        }
+                    })
+                }
+            });
+        });  
+    </script>
+
+</body>
+
+</html>
